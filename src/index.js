@@ -25,6 +25,14 @@ const client = new ApolloClient({
   cache
 });
 
+client.writeData({
+   data: {
+     cartHidden: true,
+     cartItems: [],
+     itemCount: 0
+   } 
+  });
+
 client.query({
   query: gql` 
     {
